@@ -8,6 +8,7 @@ import com.botscrew.university.exception.NoSuchDepartmentException;
 import com.botscrew.university.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -30,6 +31,7 @@ public class DepartmentService {
         return department.getHeadOfDepartment();
     }
 
+    @Transactional(readOnly = true)
     public StatisticDto getStatistics(String departmentName) {
         Department department = departmentRepository.getDepartmentByDepartmentName(departmentName)
                 .orElseThrow(() -> new NoSuchDepartmentException(
@@ -47,6 +49,7 @@ public class DepartmentService {
         return statisticDto;
     }
 
+    @Transactional(readOnly = true)
     public Double getAverageSalary(String departmentName) {
         Department department = departmentRepository.getDepartmentByDepartmentName(departmentName)
                 .orElseThrow(() -> new NoSuchDepartmentException(
@@ -58,6 +61,7 @@ public class DepartmentService {
                 .collect(Collectors.averagingInt(Lector::getSalary));
     }
 
+    @Transactional(readOnly = true)
     public Integer getCountOfEmployee(String departmentName) {
         Department department = departmentRepository.getDepartmentByDepartmentName(departmentName)
                 .orElseThrow(() -> new NoSuchDepartmentException(

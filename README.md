@@ -1,5 +1,5 @@
 #University-project
-###This application has REST API for test task cases
+###This application has console interface for test task cases
 
 Before start work on the project, you need to have:
 * PostgreSql 13.3
@@ -11,7 +11,6 @@ Before start work on the project, you need to have:
 1. Create DB:
    - `CREATE DATABASE university;`
 ### Step #2 - Run project
-Database tables will be added by liquibase tool
-### Step #3 - Go to 
-http://localhost:8080/swagger-ui/index.html
-Where you wil see swagger-doc and API with CRUD and test task specific API
+Database tables and data in these tables will be added by liquibase tool
+### Step #3 - Go to console interface
+Where you will see menu test task specific commands

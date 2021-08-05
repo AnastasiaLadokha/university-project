@@ -5,8 +5,6 @@ CREATE TABLE department
     head_of_department VARCHAR(100)
 );
 
-CREATE TYPE degree AS ENUM ('ASSISTANT', 'ASSOCIATE_PROFESSOR', 'PROFESSOR');
-
 CREATE TABLE lector
 (
     id               BIGSERIAL PRIMARY KEY,

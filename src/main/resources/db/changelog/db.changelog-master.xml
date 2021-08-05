@@ -4,9 +4,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <!--<include file="changelogs/2020_08_01_17_19_init_base.sql" relativeToChangelogFile="true"/>
-    <include file="changelogs/2020_08_01_17_28_add_table_item.sql" relativeToChangelogFile="true"/>-->
-
     <include file="changelogs/2021_08_04_18_00_init_base.sql" relativeToChangelogFile="true"/>
+    <include file="changelogs/2021_08_05_20_30_add_data_to_db.sql" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
